@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000; /* Black background color */
+            color: #fff; /* White text color */
+        }
+
+        #login-container {
+            background-color: #000; /* Black login container */
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+            color: #fff; /* White text color */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 100%;
+            padding: 12px 15px;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #00ffcc; /* Neon green border bottom */
+            background-color: transparent; /* Transparent background */
+            color: #fff; /* White text color */
+            font-size: 16px;
+            transition: border-color 0.3s ease;
+        }
+
+        input[type="text"]:focus,
+        input[type="password"]:focus {
+            outline: none;
+            border-bottom-color: #ff00ff; /* Neon pink border bottom on focus */
+        }
+
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #ff00ff; /* Neon pink submit button color */
+            border: none;
+            border-radius: 5px;
+            color: #000; /* Black text color */
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #00ffcc; /* Neon green on hover */
+        }
+
+        .social-buttons {
+            margin-top: 20px;
+        }
+
+        .social-buttons button {
+            width: calc(100% - 20px);
+            padding: 12px;
+            margin: 0 10px 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: transform 0.3s ease;
+            color: #fff; /* White text color */
+        }
+
+        .social-buttons button.google {
+            background-color: #EA4335; /* Google red */
+        }
+
+        .social-buttons button.facebook {
+            background-color: #1877F2; /* Facebook blue */
+        }
+
+        .social-buttons button.twitter {
+            background-color: #1DA1F2; /* Twitter blue */
+        }
+
+        .social-buttons button:hover {
+            transform: translateY(-3px);
+            opacity: 0.8;
+        }
+
+        .footer {
+            margin-top: 20px;
+            color: #ccc; /* Light grey text color */
+            font-size: 14px;
+        }
+
+        .footer a {
+            color: #00ffcc; /* Neon green link color */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer a:hover {
+            color: #ff00ff; /* Neon pink on hover */
+        }
+    </style>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <form id="login-form" action="" method="post">
+            <input type="text" name="username" id="username" placeholder="Username" required><br>
+            <input type="password" name="password" id="password" placeholder="Password" required><br>
+            <input type="submit" value="Login">
+        </form>
+        <div class="social-buttons">
+            <button class="google">Login with Google</button>
+            <button class="facebook">Login with Facebook</button>
+            <button class="twitter">Login with Twitter</button>
+        </div>
+        <div class="footer">
+            Don't have an account? <a href="#">Sign up</a>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Perform login validation here or submit the form data using AJAX
+            // For now, let's just log the username and password to the console
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            console.log("Username:", username);
+            console.log("Password:", password);
+        });
+    </script>
+</body>
+</html>
