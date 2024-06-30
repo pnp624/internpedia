@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Café Delight - Where Coffee Meets Happiness</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #3e2723;
+      color: #fff;
+      padding: 20px 0;
+      text-align: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
+
+    nav {
+      margin-top: 20px;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    nav ul li a:hover {
+      background-color: #5d4037;
+      transform: scale(1.1);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    section {
+      padding: 60px 0;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .section-heading h2 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .section-content p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background-color: #3e2723;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #5d4037;
+      transform: scale(1.05);
+    }
+
+    footer {
+      background-color: #3e2723;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      margin-top: 50px;
+      box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Background images for sections with overlay */
+    #about, #menu, #contact {
+      position: relative;
+      color: #fff;
+    }
+
+    #about::before, #menu::before, #contact::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+
+    #about .container, #menu .container, #contact .container {
+      position: relative;
+      z-index: 2;
+    }
+
+    #about {
+      background: url('https://images7.alphacoders.com/312/312606.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    #menu {
+      background: url('https://images7.alphacoders.com/312/312606.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+    }
+
+    #contact {
+      background: url('https://images7.alphacoders.com/312/312606.jpg') no-repeat center center/cover;
+      background-attachment: fixed;
+      color: #fff;
+    }
+
+    /* Menu section styles */
+    #menu .section-content {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 40px;
+      border-radius: 10px;
+      display: inline-block;
+    }
+
+    .menu-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-item img {
+      width: 30%;
+      border-radius: 10px;
+      margin-bottom: 10px;
+    }
+
+    .menu-item h3 {
+      font-size: 1.5rem;
+      color: #3e2723;
+      margin-bottom: 5px;
+    }
+
+    .menu-item p {
+      font-size: 1rem;
+      color: #666;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Café Delight</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <div class="section-heading">
+        <h2>About Café Delight</h2>
+      </div>
+      <div class="section-content">
+        <p>Welcome to Café Delight, where every cup tells a story. We believe that coffee is more than just a beverage – it's an experience. Our mission is to create moments of happiness, one sip at a time. Sit back, relax, and let us take you on a journey through flavor and aroma.</p>
+        <a href="#menu" class="btn">View Menu</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="menu">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Our Menu</h2>
+      </div>
+      <div class="section-content">
+        <div class="menu-item">
+          <img src="https://th.bing.com/th/id/R.a7b74a6136f7aaf6291d962a85897c06?rik=hgjDRtH%2bgnQvKw&riu=http%3a%2f%2fwww.perfectcoffeeatwork.com.au%2fimages%2fCappuccino.JPG&ehk=ghILiB89glh8cJJMgBLngEq4dgr%2blvuCFMHSwZ0XuPE%3d&risl=&pid=ImgRaw&r=0">
+          <h3>Cappuccino</h3>
+          <p>Espresso, steamed milk, and a velvety foam – the perfect balance of boldness and creaminess.</p>
+        </div>
+        <div class="menu-item">
+          <img src="https://www.roastycoffee.com/wp-content/uploads/Latte-Macchiato-480x480.jpg">
+          <h3>Latte</h3>
+          <p>Smooth espresso blended with steamed milk and finished with a delicate foam.</p>
+        </div>
+        <div class="menu-item">
+          <img src="https://th.bing.com/th/id/R.534c6f501f76b02aa99a55cb1208bb6a?rik=5AqegzyWXX24cg&riu=http%3a%2f%2fwww.forkknifeswoon.com%2fwp-content%2fuploads%2f2016%2f10%2fFork_Knife_Swoon_Double_Chocolate_Blended_Iced_Mocha_10.jpg&ehk=xzwj8a0MUktmBG%2bhcyKsRgZR9uaYVZYAR6eT%2fc8Q5B4%3d&risl=&pid=ImgRaw&r=0">
+          <h3>Mocha</h3>
+          <p>Rich espresso combined with decadent chocolate and steamed milk, topped with whipped cream.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <div class="section-heading">
+        <h2>Contact Us</h2>
+      </div>
+      <div class="section-content">
+        <p>Have a question or just want to say hello? We'd love to hear from you!</p>
+        <a href="mailto:contact@cafedelight.com" class="btn">Email Us</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 Café Delight. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
