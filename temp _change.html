@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Converter</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+
+        #converter-container {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+            width: 400px;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #00ffff;
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5); /* Neon cyan shadow */
+        }
+
+        input[type="text"] {
+            padding: 10px;
+            width: calc(100% - 20px);
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #fff;
+            text-align: center;
+        }
+
+        input[type="submit"] {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #ff00ff; /* Neon magenta */
+            color: #00ffff; /* Neon cyan */
+            transition: background-color 0.3s ease;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #ff33ff; /* Lighter neon magenta */
+        }
+
+        label {
+            color: #ccc;
+            font-size: 14px;
+            margin-bottom: 10px;
+            display: block;
+            text-transform: uppercase;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ff00ff; /* Neon magenta */
+            text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5); /* Neon magenta shadow */
+        }
+    </style>
+</head>
+<body>
+    <div id="converter-container">
+        <h2>Temperature Converter</h2>
+        <form id="tempConverter">
+            <input type="text" id="temperature" placeholder="Enter temperature">
+            <br>
+            <label for="celsius">Celsius</label>
+            <input type="radio" id="celsius" name="unit" value="celsius" checked>
+            <label for="fahrenheit">Fahrenheit</label>
+            <input type="radio" id="fahrenheit" name="unit" value="fahrenheit">
+            <br>
+            <input type="submit" value="Convert">
+        </form>
+        <div id="result"></div>
+    </div>
+
+    <script>
+        document.getElementById("tempConverter").addEventListener("submit", function(event) {
+            event.preventDefault();
+            convertTemperature();
+        });
+
+        function convertTemperature() {
+            var temperature = parseFloat(document.getElementById("temperature").value);
+            var unit = document.querySelector('input[name="unit"]:checked').value;
+            var result = document.getElementById("result");
+
+            if (isNaN(temperature)) {
+                result.innerText = "Please enter a valid temperature!";
+                return;
+            }
+
+            if (unit === "celsius") {
+                var convertedTemp = (temperature * 9/5) + 32;
+                result.innerText = temperature + "°C is " + convertedTemp.toFixed(2) + "°F";
+            } else {
+                var convertedTemp = (temperature - 32) * 5/9;
+                result.innerText = temperature + "°F is " + convertedTemp.toFixed(2) + "°C";
+            }
+        }
+    </script>
+</body>
+</html>
+	
